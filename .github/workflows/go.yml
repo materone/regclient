@@ -107,7 +107,7 @@ jobs:
         tar -cvzf metadata.tgz *.sig *.pem *.json
 
     - name: Gather release details
-      if: startsWith( github.ref, 'refs/tags/v' ) && github.repository_owner == 'regclient' && matrix.gover == env.RELEASE_GO_VER
+      if: startsWith( github.ref, 'refs/tags/v' ) && github.repository_owner == 'materone' && matrix.gover == env.RELEASE_GO_VER
       id: release_details
       run: |
         VERSION=${GITHUB_REF#refs/tags/}
